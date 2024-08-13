@@ -1,13 +1,13 @@
 const express = require("express")
 const mongoose = require('mongoose');
 
-const uri = "mongodb://localhost:27017/E-Commerce";
+const uri = "mongodb+srv://gokulg2022cce:MSDgokul007@cluster0.rk90bqs.mongodb.net/E-commerce";
 
 const app = express()
-const port = 3000
+const port = 5000
 app.use(express.json())
 mongoose.connect(uri)
-  .then(() => console.log('Connected to MongoDB compasss'))
+  .then(() => console.log('Connected to MongoDB Atlas'))
   .catch(err => console.error('Error connecting to MongoDB Atlas', err));
 
 app.use("/api/products",require('./routes/productsRoutes'))
